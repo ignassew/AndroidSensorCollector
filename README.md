@@ -37,10 +37,24 @@ If you want to build your own server, read the spec below:
 ### Message types
 
 This library uses WebSockets to communicate with the server.
-There are only 3 message types sent by the client.
+There are only 4 message types sent by the client.
 Messages are encoded in JSON.
 Server is not expected to ever send anything back.
 
+<details>
+  <summary>Identity</summary>
+
+  This message has to be sent before any other message.
+  Otherwise server shall close the connection.
+
+  ```json
+  {
+    "messageType": "identity",
+    "packageName": "com.ignassew.myapplication"
+  }
+  ```
+
+</details>
 <details>
   <summary>System Info</summary>
   

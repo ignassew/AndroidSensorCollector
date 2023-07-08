@@ -25,6 +25,8 @@ class Collector(application: Application, url: String) {
         webSocketClient.start()
 
         try {
+            webSocketClient.sendMessage(Gson().toJson(SendableIdentity(application)))
+
             sensorEventListener.startListening()
             thread {
                 val systemInfo = SystemInfo(application)
