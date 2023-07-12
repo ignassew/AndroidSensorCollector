@@ -1,9 +1,8 @@
+[![](https://jitpack.io/v/ignassew/AndroidSensorCollector.svg)](https://jitpack.io/#ignassew/AndroidSensorCollector)
 # Sensor Collector Library for Android
 Collect sensor data and system information to a websocket server
 
 # Usage
-
-You can download the library from Jitpack [![](https://jitpack.io/v/ignassew/AndroidSensorCollector.svg)](https://jitpack.io/#ignassew/AndroidSensorCollector)
 
 1. Add Jitpack repository to your root `build.gradle`:
 ```groovy
@@ -91,7 +90,7 @@ This library collects only following sensor events:
 
 # Server
 
-There is no official server available for the collector.
+My server is currently not open source.
 
 If you want to build your own server, read the spec below:
 
