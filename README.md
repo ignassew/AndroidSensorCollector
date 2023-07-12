@@ -3,9 +3,25 @@ Collect sensor data and system information to a websocket server
 
 # Usage
 
-1. Install the library
-2. [Add necessary permissions](#Permissions)
-3. Initialize the Collector class when the app starts:
+You can download the library from Jitpack [![](https://jitpack.io/v/ignassew/AndroidSensorCollector.svg)](https://jitpack.io/#ignassew/AndroidSensorCollector)
+
+1. Add Jitpack repository to your root `build.gradle`:
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+2. Add the dependency:
+```groovy
+dependencies {
+    implementation 'com.github.ignassew:AndroidSensorCollector:v1.0.2'
+}
+```
+4. [Add necessary permissions](#Permissions)
+5. Initialize the Collector class when the app starts:
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
