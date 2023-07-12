@@ -25,6 +25,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility '1.11'
+        targetCompatibility '1.11'
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
