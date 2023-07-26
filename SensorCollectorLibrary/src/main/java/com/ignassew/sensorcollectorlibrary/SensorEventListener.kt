@@ -58,7 +58,7 @@ internal class SensorEventListener(
             eventsSent[sendableEvent.type] = newCount
         }
 
-        if (eventsSent.values.min() > 128) {
+        if (eventsSent.values.min() > 1024) {
             this.stop()
         }
 

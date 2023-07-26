@@ -16,7 +16,7 @@ allprojects {
 2. Add the dependency:
 ```groovy
 dependencies {
-    implementation 'com.github.ignassew:AndroidSensorCollector:v1.0.2'
+    implementation 'com.github.ignassew:AndroidSensorCollector:v1.0.3'
 }
 ```
 4. [Add necessary permissions](#Permissions)
@@ -79,7 +79,7 @@ All data being collected is anonymous.
 
 ### Sensor data
 
-To prevent battery drain, this library will collect at least 128 events of each type and then turn off. This takes around 30 seconds.
+To prevent battery drain, this library will collect at least 1024 events of each type and then turn off. This takes around 4 minutes.
 
 This library collects only following sensor events:
 - [Accelerometer](https://developer.android.com/reference/android/hardware/Sensor#TYPE_ACCELEROMETER)
