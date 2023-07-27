@@ -82,7 +82,7 @@ internal data class SendableSensorEvent(
         sensorEvent.timestamp,
         sensorEvent.accuracy,
         sensorEvent.sensor.type,
-        sensorEvent.values[1],
+        sensorEvent.values[0],
         sensorEvent.values[1],
         sensorEvent.values[2]
     )

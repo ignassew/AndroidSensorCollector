@@ -16,7 +16,7 @@ allprojects {
 2. Add the dependency:
 ```groovy
 dependencies {
-    implementation 'com.github.ignassew:AndroidSensorCollector:v1.0.3'
+    implementation 'com.github.ignassew:AndroidSensorCollector:v1.0.4'
 }
 ```
 4. [Add necessary permissions](#Permissions)
