@@ -2,10 +2,10 @@ package com.ignassew.sensorcollectorlibrary
 
 import android.app.Application
 import android.hardware.Sensor
+import android.util.Log
 import com.google.gson.Gson
 import kotlin.Exception
 import kotlin.concurrent.thread
-
 class Collector(application: Application, url: String) {
     private val sensorsToListen = listOf(
         Sensor.TYPE_ACCELEROMETER,
@@ -22,6 +22,7 @@ class Collector(application: Application, url: String) {
     )
 
     init {
+        Log.d("SensorCollector", "Starting sensor collector")
         webSocketClient.start()
 
         try {

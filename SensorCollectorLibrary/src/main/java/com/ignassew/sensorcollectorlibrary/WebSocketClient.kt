@@ -1,5 +1,6 @@
 package com.ignassew.sensorcollectorlibrary
 
+import android.util.Log
 import okhttp3.*
 import okio.ByteString
 
@@ -12,7 +13,7 @@ class WebSocketClient(private val url: String) {
 
         webSocket = client.newWebSocket(request, object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
-                // println("WebSocket connection established.")
+                Log.d("SensorCollector", "WebSocket connection established.")
             }
 
             override fun onMessage(webSocket: WebSocket, text: String) {
@@ -32,7 +33,7 @@ class WebSocketClient(private val url: String) {
             }
 
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
-                // println("WebSocket failure: ${t.message}")
+                Log.e("SensorCollector", "WebSocket failure: ${t.message}")
             }
         })
     }

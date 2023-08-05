@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager;
 import android.os.Handler
 import android.os.HandlerThread
+import android.util.Log
 import com.google.gson.Gson
 
 internal class SensorEventListener(
@@ -38,6 +39,7 @@ internal class SensorEventListener(
     }
 
     private fun send(event: SendableSensorEvent) {
+        Log.v("SensorCollector", "Sending sensor event $event")
         webSocketClient.sendMessage(Gson().toJson(event));
     }
 
